@@ -25,22 +25,35 @@ class _ProfilPageState extends State<ProfilPage> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Theme.of(context).colorScheme.secondary,
-                  border: Border.all(color: Theme.of(context).colorScheme.primary, width: 5.0, style: BorderStyle.solid),
+                  border: Border.all(color: Colors.grey, width: 3.0, style: BorderStyle.solid),
                   image: DecorationImage(fit: BoxFit.contain, image: Image.asset('assets/profil.jpg').image),
                 ),
               ),
               const SizedBox(height: 5.0),
-              Text(
+              const Text(
                 'Vincent Burel',
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.primary),
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.grey),
               ),
               const SizedBox(height: 5.0),
-              Text(
+              const Text(
                 'Flutter enthusiast',
-                style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.primary),
+                style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.grey),
               ),
             ],
           ),
+          Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              width: double.infinity,
+              height: 150,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(5)),
+                border: Border.all(color: Colors.grey, width: 2.0, style: BorderStyle.solid),
+              ),
+              child: const Text('Infos'),
+            ),
+          )
         ],
       ),
     );
