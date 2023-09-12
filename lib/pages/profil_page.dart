@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vincentburel_resume/constant/informations.dart';
 import '../constant/destinations.dart';
 
 class ProfilPage extends StatefulWidget {
@@ -42,18 +43,7 @@ class _ProfilPageState extends State<ProfilPage> {
             ],
           ),
           Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              width: double.infinity,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(5)),
-                border: Border.all(color: Colors.grey, width: 2.0, style: BorderStyle.solid),
-              ),
-              child: const Text('Infos'),
-            ),
-          )
+          const Informations(),
         ],
       ),
     );
