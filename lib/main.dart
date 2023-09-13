@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:vincentburel_resume/cubits/infos/infos_cubit.dart';
 import 'package:vincentburel_resume/home.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'constant/color_scheme.dart';
+import 'constants/color_scheme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,13 +20,20 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: darkColorScheme,
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider<InfosCubit>(
+            create: (BuildContext context) => InfosCubit(),
+          ),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            useMaterial3: true,
+            colorScheme: darkColorScheme,
+          ),
+          home: const HomePage(),
         ),
-        home: const HomePage(),
       ),
     );
   }

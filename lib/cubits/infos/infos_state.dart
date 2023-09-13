@@ -13,12 +13,16 @@ class Information {
 }
 
 @immutable
-sealed class InfosState {}
+sealed class InfosState {
+  const InfosState();
+}
 
-final class InfosLoading extends InfosState {}
+final class InfosLoading extends InfosState {
+  const InfosLoading();
+}
 
 final class InfosLoaded extends InfosState {
   final List<Information> infos;
 
-  InfosLoaded(this.infos);
+  const InfosLoaded(this.infos);
 }

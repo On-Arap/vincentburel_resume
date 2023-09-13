@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'constant/destinations.dart';
+import 'constants/destinations.dart';
 import 'views/destination_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -61,14 +61,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomeP
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      canPop: true,
+      onPopInvoked: (bool didPop) {
         final NavigatorState navigator = navigatorKeys[selectedIndex].currentState!;
-        if (!navigator.canPop()) {
-          return true;
-        }
         navigator.pop();
-        return false;
       },
       child: Scaffold(
         body: SafeArea(

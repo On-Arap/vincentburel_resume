@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constant/destinations.dart';
+import '../constants/destinations.dart';
 import '../pages/profil_page.dart';
 
 class DestinationView extends StatefulWidget {
@@ -32,7 +32,9 @@ class _DestinationViewState extends State<DestinationView> {
                     case 'Profil':
                       return ProfilPage(destination: widget.destination);
                     default:
-                      return ProfilPage(destination: widget.destination);
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
                   }
                 }
               // case '/recipe':
