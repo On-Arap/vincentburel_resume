@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vincentburel_resume/cubits/infos/infos_cubit.dart';
-import 'package:vincentburel_resume/home.dart';
+import 'home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'constants/color_scheme.dart';
+import 'cubits/technos/technos_cubit.dart';
+import 'cubits/infos/infos_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<InfosCubit>(
             create: (BuildContext context) => InfosCubit(),
+          ),
+          BlocProvider<TechnosCubit>(
+            create: (BuildContext context) => TechnosCubit(),
           ),
         ],
         child: MaterialApp(
