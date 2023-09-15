@@ -38,14 +38,41 @@ class Informations extends StatelessWidget {
                       crossAxisCount: 2,
                       childAspectRatio: (1 / .3),
                       shrinkWrap: true,
-                      children: const [
-                        Row(children: [Icon(Icons.cake), SizedBox(width: 10), Expanded(child: Text("32", style: TextStyle(fontSize: 12)))]),
-                        Row(children: [Icon(Icons.person_pin_sharp), SizedBox(width: 10), Expanded(child: Text("M", style: TextStyle(fontSize: 12)))]),
-                        Row(children: [Icon(Icons.outlined_flag), SizedBox(width: 10), Expanded(child: Text("FR", style: TextStyle(fontSize: 12)))]),
-                        Row(children: [Icon(Icons.email_outlined), SizedBox(width: 10), Expanded(child: Text("onarap95@gmail.com", style: TextStyle(fontSize: 12)))]),
-                        Row(children: [Icon(Icons.contact_phone_outlined), SizedBox(width: 10), Expanded(child: Text("0674707763", style: TextStyle(fontSize: 12)))]),
-                        Row(children: [Icon(Icons.language_outlined), SizedBox(width: 10), Expanded(child: Text("FR, EN", style: TextStyle(fontSize: 12)))]),
-                      ],
+                      children: state.infos.map((info) {
+                        var icon;
+                        switch (info.key) {
+                          case 'age':
+                            icon = const Icon(Icons.cake);
+                            break;
+                          case 'gender':
+                            icon = const Icon(Icons.person_pin_sharp);
+                            break;
+                          case 'nationality':
+                            icon = const Icon(Icons.outlined_flag);
+                            break;
+                          case 'email':
+                            icon = const Icon(Icons.email_outlined);
+                            break;
+                          case 'phone':
+                            icon = const Icon(Icons.contact_phone_outlined);
+                            break;
+                          case 'spoken languages':
+                            icon = const Icon(Icons.language_outlined);
+                            break;
+                          default:
+                            icon = const Icon(Icons.cake);
+                        }
+                        return Row(children: [
+                          icon,
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              info.value,
+                              style: const TextStyle(fontSize: 14),
+                            ),
+                          )
+                        ]);
+                      }).toList(),
                     ),
                   );
                 } else {
