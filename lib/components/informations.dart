@@ -17,7 +17,6 @@ class Informations extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 200,
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(5)),
@@ -36,7 +35,7 @@ class Informations extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: GridView.count(
                       crossAxisCount: 2,
-                      childAspectRatio: (1 / .3),
+                      childAspectRatio: (1 / .25),
                       shrinkWrap: true,
                       children: state.infos.map((info) {
                         var icon;
