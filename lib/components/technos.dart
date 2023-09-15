@@ -38,11 +38,8 @@ class Technos extends StatelessWidget {
                       childAspectRatio: (1 / .4),
                       shrinkWrap: true,
                       children: state.technos.map((info) {
-                        var icon;
-                        switch (info.key) {
-                          default:
-                            icon = Text(info.key, style: const TextStyle(fontSize: 8));
-                        }
+                        var icon = Text(info.key, style: const TextStyle(fontSize: 8));
+
                         return Row(children: [
                           icon,
                           const SizedBox(width: 10),
