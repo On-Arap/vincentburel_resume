@@ -35,7 +35,7 @@ class Technos extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: GridView.count(
                       crossAxisCount: 2,
-                      childAspectRatio: (1 / .25),
+                      childAspectRatio: (1 / .4),
                       shrinkWrap: true,
                       children: state.technos.map((info) {
                         var icon;
@@ -47,10 +47,13 @@ class Technos extends StatelessWidget {
                           icon,
                           const SizedBox(width: 10),
                           Expanded(
-                            child: Text(
-                              info.value,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 14),
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 10.0),
+                              child: Text(
+                                info.value,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 14),
+                              ),
                             ),
                           )
                         ]);

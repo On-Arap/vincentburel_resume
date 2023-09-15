@@ -1,6 +1,6 @@
 {
-    "web": "Javascript, Angular, JQuery, Html5, css2",
-    "mobile": "Flutter, Objectif-C, Swift",
-    "ide": "Visual Studio Code, SublimeText2",
-    "methodology" : "Agile (SCRUM)"
+    "Web": "Javascript, Angular, JQuery, Html5, css2",
+    "Mobile": "Flutter, Objectif-C, Swift",
+    "IDE": "Visual Studio Code, SublimeText2",
+    "Methodology" : "Agile (SCRUM)"
 }
