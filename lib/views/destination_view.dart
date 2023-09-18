@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/destinations.dart';
+import '../pages/exp_page.dart';
 import '../pages/profil_page.dart';
 
 class DestinationView extends StatefulWidget {
@@ -31,6 +32,8 @@ class _DestinationViewState extends State<DestinationView> {
                   switch (widget.destination.title) {
                     case 'Profil':
                       return ProfilPage(destination: widget.destination);
+                    case 'Experiences':
+                      return ExpPage(destination: widget.destination);
                     default:
                       return const Center(
                         child: CircularProgressIndicator(),
