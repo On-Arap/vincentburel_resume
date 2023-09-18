@@ -15,7 +15,7 @@ class _ExpPageState extends State<ExpPage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: ListView.builder(
-      itemCount: 40,
+      itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
         return const ExperienceContainer();
       },
