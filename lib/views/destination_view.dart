@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vincentburel_resume/pages/extras_page.dart';
+import 'package:vincentburel_resume/pages/hobbies_page.dart';
+import 'package:vincentburel_resume/pages/socials_page.dart';
 import '../constants/destinations.dart';
 import '../pages/exp_page.dart';
 import '../pages/profil_page.dart';
@@ -34,9 +37,17 @@ class _DestinationViewState extends State<DestinationView> {
                       return ProfilPage(destination: widget.destination);
                     case 'Experiences':
                       return ExpPage(destination: widget.destination);
+                    case 'Hobbies':
+                      return HobbiesPage(destination: widget.destination);
+                    case 'Extras':
+                      return ExtrasPage(destination: widget.destination);
+                    case 'Socials':
+                      return SocialsPage(destination: widget.destination);
                     default:
                       return const Center(
-                        child: CircularProgressIndicator(),
+                        child: CircularProgressIndicator(
+                          color: Colors.red,
+                        ),
                       );
                   }
                 }

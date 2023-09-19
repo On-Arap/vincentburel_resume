@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../components/informations.dart';
-import '../components/technos.dart';
+import '../components/informations_container.dart';
+import '../components/technos_container.dart';
 import '../constants/destinations.dart';
 
 class ProfilPage extends StatefulWidget {
@@ -44,8 +44,8 @@ class _ProfilPageState extends State<ProfilPage> {
             ],
           ),
           Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
-          const Informations(),
-          const Technos(),
+          const InformationsContainer(),
+          const TechnosContainer(),
         ],
       ),
     );

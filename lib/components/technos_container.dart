@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vincentburel_resume/cubits/technos/technos_cubit.dart';
 
-class Technos extends StatelessWidget {
-  const Technos({super.key});
+class TechnosContainer extends StatelessWidget {
+  const TechnosContainer({super.key});
 
   void infosLoading(BuildContext context) {
     final infosCubit = context.read<TechnosCubit>();
