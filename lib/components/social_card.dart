@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SocialCard extends StatelessWidget {
   final Color? color;
   final Icon iconFirst;
   final String text;
   final Icon iconSecond;
+  final String url;
 
   const SocialCard({
     super.key,
@@ -12,7 +14,14 @@ class SocialCard extends StatelessWidget {
     required this.iconFirst,
     required this.text,
     required this.iconSecond,
+    required this.url,
   });
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(Uri.parse(url))) {
+      throw Exception('Could not launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +36,16 @@ class SocialCard extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              iconFirst,
-              Text(text),
-              iconSecond,
-            ],
+          child: InkWell(
+            onTap: _launchUrl,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                iconFirst,
+                Text(text),
+                iconSecond,
+              ],
+            ),
           ),
         ),
       ),
