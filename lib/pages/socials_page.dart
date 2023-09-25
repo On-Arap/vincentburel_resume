@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vincentburel_resume/components/social_card.dart';
 import '../components/general_info_container.dart';
 import '../constants/destinations.dart';
 
@@ -19,6 +20,24 @@ class _SocialsPageState extends State<SocialsPage> {
         children: [
           const GeneralInfoContainer(height: 100),
           Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
+          SocialCard(
+            color: Colors.blue[500],
+            iconFirst: const Icon(Icons.insert_link),
+            text: 'Facebook',
+            iconSecond: const Icon(Icons.insert_link),
+          ),
+          SocialCard(
+            color: Colors.grey[600],
+            iconFirst: const Icon(Icons.insert_link),
+            text: 'Twitter',
+            iconSecond: const Icon(Icons.insert_link),
+          ),
+          SocialCard(
+            color: Colors.blue[900],
+            iconFirst: const Icon(Icons.insert_link),
+            text: 'LinkedIn',
+            iconSecond: const Icon(Icons.insert_link),
+          ),
         ],
       ),
     );
