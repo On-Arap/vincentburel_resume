@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/hobbie_card.dart';
 import '../constants/destinations.dart';
 
 class HobbiesPage extends StatefulWidget {
@@ -22,33 +23,7 @@ class _HobbiesPageState extends State<HobbiesPage> {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemCount: widget.emojis.length,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: const BoxDecoration(
-                  color: Color(0x55000000),
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                ),
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        widget.emojis[index],
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      Text(
-                        widget.hobbies[index],
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            );
+            return HobbieCard(emoji: widget.emojis[index], hobbie: widget.hobbies[index]);
           },
         ),
       ),
