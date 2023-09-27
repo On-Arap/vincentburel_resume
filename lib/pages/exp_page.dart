@@ -17,7 +17,13 @@ class _ExpPageState extends State<ExpPage> {
         child: ListView.builder(
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
-        return const ExperienceContainer();
+        return const ExperienceContainer(
+          image: 'assets/flutter_logo.png',
+          org: 'Flutter',
+          period: '2022-2023',
+          jobTitle: 'Developppeur Mobile, autodidacte Flutter, build of many differents project to learn and use Flutter',
+          stack: 'Flutter, Dart',
+        );
       },
     ));
   }

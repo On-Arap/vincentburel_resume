@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ExperienceContainer extends StatelessWidget {
-  const ExperienceContainer({super.key});
+  final String image;
+  final String org;
+  final String period;
+  final String jobTitle;
+  final String stack;
+
+  const ExperienceContainer({
+    super.key,
+    required this.image,
+    required this.org,
+    required this.period,
+    required this.jobTitle,
+    required this.stack,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +31,11 @@ class ExperienceContainer extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/flutter_logo.png',
-                width: 50,
-              ),
+              child: Image.asset(image, width: 50),
             ),
-            const Expanded(
+            Expanded(
               child: Padding(
-                padding: EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -33,17 +43,17 @@ class ExperienceContainer extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Flutter', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                        Text('2022-2023', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                        Text(org, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                        Text(period, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
                       ],
                     ),
-                    SizedBox(height: 10),
-                    Text('Developppeur Mobile, autodidacte Flutter, build of many differents project to learn and use Flutter'),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
+                    Text(jobTitle),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
-                        Text('Stack: ', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-                        Text('Flutter, Dart'),
+                        const Text('Stack: ', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        Text(stack),
                       ],
                     )
                   ],
