@@ -14,17 +14,19 @@ class _ExpPageState extends State<ExpPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: ListView.builder(
-      itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
-        return const ExperienceContainer(
-          image: 'assets/flutter_logo.png',
-          org: 'Flutter',
-          period: '2022-2023',
-          jobTitle: 'Developppeur Mobile, autodidacte Flutter, build of many differents project to learn and use Flutter',
-          stack: 'Flutter, Dart',
-        );
-      },
-    ));
+      child: ListView.builder(
+        shrinkWrap: false,
+        itemCount: 8,
+        itemBuilder: (BuildContext context, int index) {
+          return const ExperienceContainer(
+            image: 'assets/flutter_logo.png',
+            org: 'Flutter',
+            period: '2022-2023',
+            jobTitle: 'Developppeur Mobile, autodidacte Flutter, build of many differents project to learn and use Flutter',
+            stack: 'Flutter, Dart',
+          );
+        },
+      ),
+    );
   }
 }
