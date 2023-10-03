@@ -19,6 +19,7 @@ class _HobbiesPageState extends State<HobbiesPage> {
     return SafeArea(
       child: Center(
         child: GridView.builder(
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemCount: widget.emojis.length,

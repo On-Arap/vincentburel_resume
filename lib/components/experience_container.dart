@@ -4,7 +4,7 @@ class ExperienceContainer extends StatelessWidget {
   final String image;
   final String org;
   final String period;
-  final String jobTitle;
+  final String jobDesc;
   final String stack;
 
   const ExperienceContainer({
@@ -12,7 +12,7 @@ class ExperienceContainer extends StatelessWidget {
     required this.image,
     required this.org,
     required this.period,
-    required this.jobTitle,
+    required this.jobDesc,
     required this.stack,
   });
 
@@ -31,7 +31,7 @@ class ExperienceContainer extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset(image, width: 50),
+              child: Image.network(image, width: 50),
             ),
             Expanded(
               child: Padding(
@@ -48,11 +48,11 @@ class ExperienceContainer extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10),
-                    Text(jobTitle),
+                    Text(jobDesc, style: TextStyle(fontSize: 16)),
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        const Text('Stack: ', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        const Text('Stack: ', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                         Text(stack),
                       ],
                     )

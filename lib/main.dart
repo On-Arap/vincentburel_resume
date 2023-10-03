@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vincentburel_resume/bloc/experience/experience_bloc.dart';
 import 'home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider<TechnosCubit>(
             create: (BuildContext context) => TechnosCubit(),
+          ),
+          BlocProvider<ExperienceBloc>(
+            create: (_) => ExperienceBloc()..add(LoadingExperience()),
           ),
         ],
         child: MaterialApp(
