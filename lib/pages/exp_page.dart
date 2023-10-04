@@ -26,7 +26,7 @@ class _ExpPageState extends State<ExpPage> {
             return Scaffold(
               appBar: AppBar(
                 title: const Center(child: Text("Past Experiences", style: TextStyle(fontWeight: FontWeight.w600))),
-                backgroundColor: const Color.fromARGB(255, 3, 58, 49),
+                backgroundColor: Color(0xFF033A31),
               ),
               body: Padding(
                 padding: const EdgeInsets.only(top: 15.0),

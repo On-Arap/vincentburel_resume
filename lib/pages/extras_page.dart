@@ -12,13 +12,22 @@ class ExtrasPage extends StatefulWidget {
 class _ExpPageState extends State<ExtrasPage> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Extras'),
-            CircularProgressIndicator(color: Colors.greenAccent),
+            Image.asset(
+              'assets/wip.png',
+              width: 200,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              'Work in Progress',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Color(0xFF00A0AA)),
+            ),
           ],
         ),
       ),
