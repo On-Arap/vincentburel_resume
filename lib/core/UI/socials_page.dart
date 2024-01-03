@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vincentburel_resume/components/social_card.dart';
-import '../components/general_info_container.dart';
-import '../constants/destinations.dart';
+import '../widgets/widget.dart';
+import '../classes/destinations.dart';
 
 class SocialsPage extends StatefulWidget {
   final Destination destination;

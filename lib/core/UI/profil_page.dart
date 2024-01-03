@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import '../components/general_info_container.dart';
-import '../components/informations_container.dart';
-import '../components/technos_container.dart';
-import '../constants/destinations.dart';
+import '../widgets/widget.dart';
+import '../classes/destinations.dart';
 
 class ProfilPage extends StatefulWidget {
   final Destination destination;

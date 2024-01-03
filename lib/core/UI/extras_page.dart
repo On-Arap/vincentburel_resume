@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants/destinations.dart';
+import '../classes/destinations.dart';
+import '../widgets/widget.dart';
 
 class ExtrasPage extends StatefulWidget {
   final Destination destination;

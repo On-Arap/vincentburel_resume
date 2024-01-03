@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vincentburel_resume/pages/extras_page.dart';
-import 'package:vincentburel_resume/pages/hobbies_page.dart';
-import 'package:vincentburel_resume/pages/socials_page.dart';
-import '../constants/destinations.dart';
-import '../pages/exp_page.dart';
-import '../pages/profil_page.dart';
+import 'package:vincentburel_resume/core/UI/extras_page.dart';
+import 'package:vincentburel_resume/core/UI/hobbies_page.dart';
+import 'package:vincentburel_resume/core/UI/socials_page.dart';
+import '../classes/destinations.dart';
+import '../UI/exp_page.dart';
+import '../UI/profil_page.dart';
 
 class DestinationView extends StatefulWidget {
   const DestinationView({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vincentburel_resume/cubits/infos/infos_cubit.dart';
+import 'package:vincentburel_resume/core/datas/cubits/cubit.dart';
 
 class InformationsContainer extends StatelessWidget {
   const InformationsContainer({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vincentburel_resume/bloc/experience/experience_bloc.dart';
-import '../components/experience_container.dart';
-import '../constants/destinations.dart';
+import 'package:vincentburel_resume/core/datas/bloc/bloc.dart';
+import '../widgets/widget.dart';
+import '../classes/destinations.dart';
 
 class ExpPage extends StatefulWidget {
   final Destination destination;

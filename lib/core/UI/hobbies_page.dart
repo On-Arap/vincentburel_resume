@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../components/hobbie_card.dart';
-import '../constants/destinations.dart';
+import '../widgets/widget.dart';
+import '../classes/destinations.dart';
 
 class HobbiesPage extends StatefulWidget {
   final Destination destination;

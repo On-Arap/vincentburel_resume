@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vincentburel_resume/bloc/experience/experience_bloc.dart';
 import 'home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'constants/color_scheme.dart';
-import 'cubits/technos/technos_cubit.dart';
-import 'cubits/infos/infos_cubit.dart';
+import 'core/datas/bloc/bloc.dart';
+import 'core/utils/color_scheme.dart';
+import 'core/datas/cubits/cubit.dart';
 
 void main() {
   runApp(const MyApp());

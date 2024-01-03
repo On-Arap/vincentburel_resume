@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'constants/destinations.dart';
-import 'views/destination_view.dart';
+import 'core/classes/destinations.dart';
+import 'core/routes/destination_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
