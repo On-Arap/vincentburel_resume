@@ -18,7 +18,6 @@ class _SocialsPageState extends State<SocialsPage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           const GeneralInfoContainer(height: 100),
-          Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
           // SocialCard(
           //   color: Colors.blue[500],
           //   iconFirst: const Icon(Icons.insert_link),

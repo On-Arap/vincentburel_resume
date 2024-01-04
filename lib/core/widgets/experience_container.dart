@@ -22,9 +22,8 @@ class ExperienceContainer extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(5)),
-          border: Border.all(color: Colors.grey, width: 2.0, style: BorderStyle.solid),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,

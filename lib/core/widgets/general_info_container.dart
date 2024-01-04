@@ -7,33 +7,39 @@ class GeneralInfoContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 10.0),
-        Hero(
-          tag: "ProfilBloc",
-          child: Container(
-            width: 150,
-            height: height,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Theme.of(context).colorScheme.secondary,
-              border: Border.all(color: Colors.grey, width: 3.0, style: BorderStyle.solid),
-              image: DecorationImage(fit: BoxFit.contain, image: Image.asset('assets/profil.jpg').image),
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: Color(0xFF62A194),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25), bottomRight: Radius.circular(25)),
+      ),
+      child: Column(
+        children: [
+          const SizedBox(height: 10.0),
+          Hero(
+            tag: "ProfilBloc",
+            child: Container(
+              width: 150,
+              height: height,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(fit: BoxFit.contain, image: Image.asset('assets/profil.jpg').image),
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 5.0),
-        const Text(
-          'Vincent Burel',
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.grey),
-        ),
-        const SizedBox(height: 5.0),
-        const Text(
-          'Flutter enthusiast',
-          style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.grey),
-        ),
-      ],
+          const SizedBox(height: 5.0),
+          const Text(
+            'Vincent Burel',
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 5.0),
+          const Text(
+            'Flutter enthusiast',
+            style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 15.0),
+        ],
+      ),
     );
   }
 }

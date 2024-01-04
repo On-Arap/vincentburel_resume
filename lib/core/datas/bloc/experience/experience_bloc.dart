@@ -27,7 +27,8 @@ List<Experience> experiencesData = [
     stack: 'Objectif-C',
   ),
   Experience(
-    image: 'https://media.licdn.com/dms/image/C4D0BAQGi5VLD3zj1KQ/company-logo_200_200/0/1625157115676?e=1704326400&v=beta&t=8TQYaqoM_zQchPmuO4zSsa6x17OGmvmdg0JQ-kqKo08',
+    image:
+        'https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/354244215_697152142422712_7668829667247346013_n.png?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=VC-xQQLJRukAX-1slme&_nc_ht=scontent-cdg4-3.xx&oh=00_AfDSkjgpBFkSWyuQLdI7iuN9hJSG0yDD1UbK26hr-iInfw&oe=659C880F',
     org: 'OP1C - On prend un cafe',
     period: '2012-2013',
     jobDesc: 'JavaScript Developer, research and developed many Facebook Apps',

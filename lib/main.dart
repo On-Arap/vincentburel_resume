@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,6 +8,11 @@ import 'core/utils/color_scheme.dart';
 import 'core/datas/cubits/cubit.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.black,
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -17,10 +23,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme, fontFamily: 'MartelSans'),
+      darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme, fontFamily: 'MartelSans'),
       home: MultiBlocProvider(
         providers: [
           BlocProvider<InfosCubit>(
@@ -33,14 +37,7 @@ class MyApp extends StatelessWidget {
             create: (_) => ExperienceBloc()..add(LoadingExperience()),
           ),
         ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            useMaterial3: true,
-            colorScheme: darkColorScheme,
-          ),
-          home: const HomePage(),
-        ),
+        child: const HomePage(),
       ),
     );
   }

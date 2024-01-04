@@ -19,14 +19,11 @@ class _ExpPageState extends State<ExpPage> {
       child: BlocBuilder<ExperienceBloc, ExperienceState>(
         builder: (context, state) {
           if (state is ExperienceInitial) {
-            return const CircularProgressIndicator(
-              color: Color.fromARGB(255, 3, 58, 49),
-            );
+            return const CircularProgressIndicator();
           } else if (state is ExperienceLoaded) {
             return Scaffold(
               appBar: AppBar(
                 title: const Center(child: Text("Past Experiences", style: TextStyle(fontWeight: FontWeight.w600))),
-                backgroundColor: Color(0xFF033A31),
               ),
               body: Padding(
                 padding: const EdgeInsets.only(top: 15.0),

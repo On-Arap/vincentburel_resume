@@ -17,10 +17,16 @@ class _ProfilPageState extends State<ProfilPage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const GeneralInfoContainer(height: 150),
-          Divider(height: 50, thickness: 2, indent: 20, endIndent: 20, color: Colors.grey[800]),
-          const InformationsContainer(),
-          const TechnosContainer(),
+          GeneralInfoContainer(height: 150),
+          Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 125),
+                child: TechnosContainer(),
+              ),
+              InformationsContainer(),
+            ],
+          )
         ],
       ),
     );
