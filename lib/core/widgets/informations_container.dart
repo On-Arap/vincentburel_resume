@@ -12,76 +12,80 @@ class InformationsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(25)),
-            color: Color(0xFFAED6CE),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+              color: Color(0xFF7DB8AC),
+            ),
+            child: BlocBuilder<InfosCubit, InfosState>(
+              builder: (context, state) {
+                if (state is InfosLoading) {
+                  infosLoading(context);
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+                if (state is InfosLoaded) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: (1 / .25),
+                      shrinkWrap: true,
+                      children: state.infos.map((info) {
+                        var icon;
+                        switch (info.key) {
+                          case 'age':
+                            icon = const Icon(Icons.cake);
+                            break;
+                          case 'gender':
+                            icon = const Icon(Icons.person_pin_sharp);
+                            break;
+                          case 'nationality':
+                            icon = const Icon(Icons.outlined_flag);
+                            break;
+                          case 'email':
+                            icon = const Icon(Icons.email_outlined);
+                            break;
+                          case 'phone':
+                            icon = const Icon(Icons.contact_phone_outlined);
+                            break;
+                          case 'spoken languages':
+                            icon = const Icon(Icons.language_outlined);
+                            break;
+                          default:
+                            icon = const Icon(Icons.cake);
+                        }
+                        return Row(children: [
+                          icon,
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              info.value,
+                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ]);
+                      }).toList(),
+                    ),
+                  );
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(
+                      color: Colors.red,
+                    ),
+                  );
+                }
+              },
+            ),
           ),
-          child: BlocBuilder<InfosCubit, InfosState>(
-            builder: (context, state) {
-              if (state is InfosLoading) {
-                infosLoading(context);
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
-              if (state is InfosLoaded) {
-                return Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: GridView.count(
-                    crossAxisCount: 2,
-                    childAspectRatio: (1 / .25),
-                    shrinkWrap: true,
-                    children: state.infos.map((info) {
-                      var icon;
-                      switch (info.key) {
-                        case 'age':
-                          icon = const Icon(Icons.cake);
-                          break;
-                        case 'gender':
-                          icon = const Icon(Icons.person_pin_sharp);
-                          break;
-                        case 'nationality':
-                          icon = const Icon(Icons.outlined_flag);
-                          break;
-                        case 'email':
-                          icon = const Icon(Icons.email_outlined);
-                          break;
-                        case 'phone':
-                          icon = const Icon(Icons.contact_phone_outlined);
-                          break;
-                        case 'spoken languages':
-                          icon = const Icon(Icons.language_outlined);
-                          break;
-                        default:
-                          icon = const Icon(Icons.cake);
-                      }
-                      return Row(children: [
-                        icon,
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Text(
-                            info.value,
-                            style: const TextStyle(fontSize: 14),
-                          ),
-                        )
-                      ]);
-                    }).toList(),
-                  ),
-                );
-              } else {
-                return const Center(
-                  child: CircularProgressIndicator(
-                    color: Colors.red,
-                  ),
-                );
-              }
-            },
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

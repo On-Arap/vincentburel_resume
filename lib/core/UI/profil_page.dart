@@ -13,20 +13,13 @@ class ProfilPage extends StatefulWidget {
 class _ProfilPageState extends State<ProfilPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           GeneralInfoContainer(height: 150),
-          Stack(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 125),
-                child: TechnosContainer(),
-              ),
-              InformationsContainer(),
-            ],
-          )
+          InformationsContainer(),
+          TechnosContainer(),
         ],
       ),
     );
