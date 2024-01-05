@@ -16,7 +16,6 @@ class Experience {
   });
 }
 
-@immutable
 sealed class ExperienceState {}
 
 final class ExperienceInitial extends ExperienceState {}

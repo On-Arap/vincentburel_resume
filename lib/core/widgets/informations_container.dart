@@ -38,7 +38,7 @@ class InformationsContainer extends StatelessWidget {
                       childAspectRatio: (1 / .25),
                       shrinkWrap: true,
                       children: state.infos.map((info) {
-                        var icon;
+                        var icon = const Icon(Icons.cake);
                         switch (info.key) {
                           case 'age':
                             icon = const Icon(Icons.cake);

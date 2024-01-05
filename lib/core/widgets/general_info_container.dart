@@ -23,6 +23,10 @@ class GeneralInfoContainer extends StatelessWidget {
               height: height,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
+                border: Border.all(
+                  width: 5,
+                  color: const Color(0xFF7DB8AC),
+                ),
                 image: DecorationImage(fit: BoxFit.contain, image: Image.asset('assets/profil.jpg').image),
               ),
             ),

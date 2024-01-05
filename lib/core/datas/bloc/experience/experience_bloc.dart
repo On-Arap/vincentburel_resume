@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'experience_event.dart';
 part 'experience_state.dart';

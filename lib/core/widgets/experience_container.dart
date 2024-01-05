@@ -23,6 +23,7 @@ class ExperienceContainer extends StatelessWidget {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
+          color: Color(0xFF7DB8AC),
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
         child: Row(
@@ -47,7 +48,7 @@ class ExperienceContainer extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10),
-                    Text(jobDesc, style: TextStyle(fontSize: 16)),
+                    Text(jobDesc, style: const TextStyle(fontSize: 16)),
                     const SizedBox(height: 10),
                     Row(
                       children: [

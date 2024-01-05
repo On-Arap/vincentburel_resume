@@ -89,6 +89,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomeP
           ),
         ),
         bottomNavigationBar: NavigationBar(
+          backgroundColor: const Color(0xFF62A194),
+          indicatorColor: const Color(0xFF7DB8AC),
           selectedIndex: selectedIndex,
           onDestinationSelected: (int index) {
             setState(() {

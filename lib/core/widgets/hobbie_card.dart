@@ -18,7 +18,7 @@ class HobbieCard extends StatelessWidget {
         width: 50,
         height: 50,
         decoration: const BoxDecoration(
-          color: Color(0x55000000),
+          color: Color(0xFF7DB8AC),
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
         child: Center(
