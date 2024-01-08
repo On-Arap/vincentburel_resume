@@ -13,13 +13,18 @@ class ProfilPage extends StatefulWidget {
 class _ProfilPageState extends State<ProfilPage> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          GeneralInfoContainer(height: 150),
-          InformationsContainer(),
-          TechnosContainer(),
+          GeneralInfoContainer(
+            height: 150,
+            image: Image.asset('assets/profil.jpg'),
+            title: 'Vincent Burel',
+            subtitle: 'Flutter enthusiast',
+          ),
+          const InformationsContainer(),
+          const TechnosContainer(),
         ],
       ),
     );

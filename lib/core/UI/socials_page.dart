@@ -17,8 +17,12 @@ class _SocialsPageState extends State<SocialsPage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const GeneralInfoContainer(height: 100),
-          // SocialCard(
+          GeneralInfoContainer(
+            height: 100,
+            image: Image.asset('assets/profil.jpg'),
+            title: 'Vincent Burel',
+            subtitle: 'Flutter enthusiast',
+          ), // SocialCard(
           //   color: Colors.blue[500],
           //   iconFirst: const Icon(Icons.insert_link),
           //   text: 'Facebook',

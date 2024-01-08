@@ -4,3 +4,4 @@ export './hobbie_card.dart';
 export './informations_container.dart';
 export './social_card.dart';
 export './technos_container.dart';
+export './extra_container.dart';

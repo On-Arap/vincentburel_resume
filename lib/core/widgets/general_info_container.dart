@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 
 class GeneralInfoContainer extends StatelessWidget {
+  final Image image;
+  final String title;
+  final String subtitle;
+
   final double height;
 
-  const GeneralInfoContainer({super.key, required this.height});
+  const GeneralInfoContainer({
+    super.key,
+    required this.height,
+    required this.image,
+    required this.title,
+    required this.subtitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +37,19 @@ class GeneralInfoContainer extends StatelessWidget {
                   width: 5,
                   color: const Color(0xFF7DB8AC),
                 ),
-                image: DecorationImage(fit: BoxFit.contain, image: Image.asset('assets/profil.jpg').image),
+                image: DecorationImage(fit: BoxFit.contain, image: image.image),
               ),
             ),
           ),
           const SizedBox(height: 5.0),
-          const Text(
-            'Vincent Burel',
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 5.0),
-          const Text(
-            'Flutter enthusiast',
-            style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
+          Text(
+            subtitle,
+            style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 15.0),
         ],
