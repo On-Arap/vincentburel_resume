@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             create: (_) => ExperienceBloc()..add(LoadingExperience()),
           ),
           BlocProvider<SggTournamentsBloc>(
-            create: (_) => SggTournamentsBloc()..add(SggTournamentsStartLoading()),
+            create: (_) => SggTournamentsBloc(),
           ),
         ],
         child: const HomePage(),

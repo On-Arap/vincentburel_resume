@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Tournament {
   final int index;
-  final String title;
+  final String name;
+  final String slug;
 
-  const Tournament(this.index, this.title);
+  const Tournament(this.index, this.name, this.slug);
 }

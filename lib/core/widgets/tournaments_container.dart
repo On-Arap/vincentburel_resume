@@ -32,6 +32,7 @@ class TournamentsContainer extends StatelessWidget {
               ),
             );
           } else {
+            context.read<SggTournamentsBloc>().add(SggTournamentsStartLoading());
             return const CircularProgressIndicator(color: Colors.blue);
           }
         },
