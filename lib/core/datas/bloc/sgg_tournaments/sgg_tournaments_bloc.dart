@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import '../../../classes/classe.dart';
 import 'package:http/http.dart' as http;
 import '../../../utils/startgg_config.dart';
