@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vincentburel_resume/core/datas/bloc/sgg_tournaments/sgg_tournaments_bloc.dart';
 import 'home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,6 +36,9 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider<ExperienceBloc>(
             create: (_) => ExperienceBloc()..add(LoadingExperience()),
+          ),
+          BlocProvider<SggTournamentsBloc>(
+            create: (_) => SggTournamentsBloc()..add(SggTournamentsStartLoading()),
           ),
         ],
         child: const HomePage(),

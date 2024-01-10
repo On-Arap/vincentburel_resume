@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-
+import '../../../classes/classe.dart';
 part 'experience_event.dart';
 part 'experience_state.dart';
 
@@ -26,8 +26,7 @@ List<Experience> experiencesData = [
     stack: 'Objectif-C',
   ),
   Experience(
-    image:
-        'https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/354244215_697152142422712_7668829667247346013_n.png?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=VC-xQQLJRukAX-1slme&_nc_ht=scontent-cdg4-3.xx&oh=00_AfDSkjgpBFkSWyuQLdI7iuN9hJSG0yDD1UbK26hr-iInfw&oe=659C880F',
+    image: 'https://media.licdn.com/dms/image/C4D0BAQGi5VLD3zj1KQ/company-logo_200_200/0/1630563622621/op1c_logo?e=1712793600&v=beta&t=54oJ_nOJdr8WaUQCQNm4kO9v_R-8CVUtgyUGMXF9Fh8',
     org: 'OP1C - On prend un cafe',
     period: '2012-2013',
     jobDesc: 'JavaScript Developer, research and developed many Facebook Apps',

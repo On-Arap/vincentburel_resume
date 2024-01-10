@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vincentburel_resume/core/widgets/extra_container.dart';
-import 'package:vincentburel_resume/core/widgets/general_info_container.dart';
 import '../classes/destinations.dart';
+import '../widgets/widget.dart';
 
 class ExtrasPage extends StatefulWidget {
   final Destination destination;
@@ -25,6 +24,7 @@ class _ExpPageState extends State<ExtrasPage> {
             subtitle: 'Tournament Organization Association',
           ),
           const ExtraContainer(),
+          const TournamentsContainer(),
         ],
       ),
     );
