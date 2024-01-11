@@ -25,6 +25,7 @@ class _ExpPageState extends State<ExtrasPage> {
           ),
           const ExtraContainer(),
           const TournamentsContainer(),
+          const TournamentsListContainer(),
         ],
       ),
     );

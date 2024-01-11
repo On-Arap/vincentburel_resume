@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import '../../../classes/classe.dart';
@@ -19,12 +18,13 @@ class SggTournamentsBloc extends Bloc<SggTournamentsEvent, SggTournamentsState> 
     final response = await http.post(Uri.parse('https://api.start.gg/gql/alpha'),
         headers: {'Authorization': config["auth"].toString()},
         body: jsonEncode({
-          "query": "query TournamentsByOwner(\$ownerId: ID!) {tournaments(query: { filter: {ownerId: \$ownerId}}) {nodes {id name slug}}}",
+          "query": "query TournamentsByOwner(\$ownerId: ID!) {tournaments(query: { filter: {ownerId: \$ownerId}}) {nodes {id name images {url} slug numAttendees}}}",
           "variables": {"ownerId": 610919}
         }));
-    inspect(response);
     final Map<String, dynamic> responseJson = jsonDecode(response.body);
-    List<Tournament> listedTournies = responseJson["data"]["tournaments"]["nodes"].map<Tournament>((e) => Tournament(e["id"], e["name"], e["slug"])).toList();
+    List<Tournament> listedTournies = responseJson["data"]["tournaments"]["nodes"].map<Tournament>((e) {
+      return Tournament(e["id"], e["name"], e["images"][0]["url"], e["slug"], e["numAttendees"]);
+    }).toList();
 
     // Bouchon Data
     // List tournies = [
