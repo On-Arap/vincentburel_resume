@@ -5,5 +5,5 @@ If you're willing to download the App, you can find APKs here : [DOWNLOADs](http
 
 ## Screenshots
 
-![App Screenshot](https://github.com/On-Arap/vincentburel_resume/blob/main/assets/screenshot.png?raw=true)
+![App Screenshot](https://github.com/On-Arap/vincentburel_resume/blob/main/assets/screenshot_0.2.png?raw=true)
 

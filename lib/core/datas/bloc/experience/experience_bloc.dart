@@ -6,7 +6,7 @@ part 'experience_state.dart';
 List<Experience> experiencesData = [
   Experience(
     image: 'https://static-00.iconduck.com/assets.00/flutter-icon-1651x2048-ojswpayr.png',
-    org: 'learning Flutter',
+    org: 'Flutter',
     period: '2022-2023',
     jobDesc: 'Mobile Developer, autodidacte Flutter, build of many differents project to learn and use Flutter',
     stack: 'Flutter, Dart',
@@ -33,7 +33,7 @@ List<Experience> experiencesData = [
     stack: 'JavaScript, PHP',
   ),
   Experience(
-    image: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397209090/45a26b9b7475566518e89d60e535e70b.jpg',
+    image: 'https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1397209090/45a26b9b7475566518e89d60e535e70b.jpg',
     org: 'LeNewz',
     period: '2011',
     jobDesc: 'Web Development Intership, build new features for a Web News website, that gathered many articles based on keywords',

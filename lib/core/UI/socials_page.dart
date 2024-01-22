@@ -21,7 +21,7 @@ class _SocialsPageState extends State<SocialsPage> {
             height: 100,
             image: Image.asset('assets/profil.jpg'),
             title: 'Vincent Burel',
-            subtitle: 'Flutter enthusiast',
+            subtitle: 'Frontend Dev, Flutter enthusiast',
           ), // SocialCard(
           //   color: Colors.blue[500],
           //   iconFirst: const Icon(Icons.insert_link),
@@ -30,15 +30,15 @@ class _SocialsPageState extends State<SocialsPage> {
           //   url: 'https://facebook.com/',
           // ),
           SocialCard(
-            color: Colors.deepPurple[600],
-            iconFirst: const Icon(Icons.insert_link),
+            color: const Color(0xFF906FD3),
+            iconFirst: Image.asset('assets/github_logo.png'),
             text: 'Github',
             iconSecond: const Icon(Icons.insert_link),
             url: 'https://github.com/On-Arap',
           ),
           SocialCard(
-            color: Colors.blue[900],
-            iconFirst: const Icon(Icons.insert_link),
+            color: const Color(0xFF5C95E9),
+            iconFirst: Image.asset('assets/linkedin_logo.png'),
             text: 'LinkedIn',
             iconSecond: const Icon(Icons.insert_link),
             url: 'https://www.linkedin.com/in/vincent-burel-56b13558/',

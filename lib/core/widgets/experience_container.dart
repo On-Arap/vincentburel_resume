@@ -43,16 +43,16 @@ class ExperienceContainer extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(org, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                        Text(period, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                        Text(org, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                        Text(period, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w500)),
                       ],
                     ),
                     const SizedBox(height: 10),
-                    Text(jobDesc, style: const TextStyle(fontSize: 16)),
+                    Text(jobDesc, style: const TextStyle(fontSize: 12)),
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        const Text('Stack: ', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                        const Text('Stack: ', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                         Text(stack),
                       ],
                     )

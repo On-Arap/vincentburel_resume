@@ -21,7 +21,7 @@ class _ProfilPageState extends State<ProfilPage> {
             height: 150,
             image: Image.asset('assets/profil.jpg'),
             title: 'Vincent Burel',
-            subtitle: 'Flutter enthusiast',
+            subtitle: 'Frontend Dev, Flutter enthusiast',
           ),
           const InformationsContainer(),
           const TechnosContainer(),

@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SocialCard extends StatelessWidget {
   final Color? color;
-  final Icon iconFirst;
+  final Image iconFirst;
   final String text;
   final Icon iconSecond;
   final String url;
@@ -28,7 +28,7 @@ class SocialCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: Container(
-        height: 40,
+        height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
           color: color,
@@ -42,8 +42,17 @@ class SocialCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 iconFirst,
-                Text(text),
-                iconSecond,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(text, style: const TextStyle(fontWeight: FontWeight.bold)),
+                    Text(url, style: const TextStyle(fontSize: 10)),
+                  ],
+                ),
+                SizedBox(
+                  width: 48,
+                  child: iconSecond,
+                ),
               ],
             ),
           ),
