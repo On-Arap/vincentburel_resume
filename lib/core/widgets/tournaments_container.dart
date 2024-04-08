@@ -14,7 +14,6 @@ class TournamentsContainer extends StatelessWidget {
       child: BlocBuilder<SggTournamentsBloc, SggTournamentsState>(
         builder: (context, state) {
           if (state is SggTournamentsLoaded) {
-            inspect(state.tournaments);
             return Container(
               width: double.infinity,
               decoration: const BoxDecoration(

@@ -24,6 +24,7 @@ class _ProfilPageState extends State<ProfilPage> {
             subtitle: 'Frontend Dev, Flutter enthusiast',
           ),
           const InformationsContainer(),
+          const StudiesContainer(),
           const TechnosContainer(),
         ],
       ),

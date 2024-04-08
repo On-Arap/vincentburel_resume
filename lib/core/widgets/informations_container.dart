@@ -21,6 +21,7 @@ class InformationsContainer extends StatelessWidget {
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
               color: Color(0xFF7DB8AC),
+              boxShadow: [BoxShadow(offset: Offset(3, 3), blurRadius: 2.0)],
             ),
             child: BlocBuilder<InfosCubit, InfosState>(
               builder: (context, state) {
@@ -67,7 +68,7 @@ class InformationsContainer extends StatelessWidget {
                           Expanded(
                             child: Text(
                               info.value,
-                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           )
                         ]);

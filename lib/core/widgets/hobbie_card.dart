@@ -20,6 +20,7 @@ class HobbieCard extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Color(0xFF7DB8AC),
           borderRadius: BorderRadius.all(Radius.circular(5)),
+          boxShadow: [BoxShadow(offset: Offset(3, 3), blurRadius: 2.0)],
         ),
         child: Center(
           child: Column(

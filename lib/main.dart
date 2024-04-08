@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme, fontFamily: 'MartelSans'),
       darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme, fontFamily: 'MartelSans'),
+      debugShowCheckedModeBanner: false,
       home: MultiBlocProvider(
         providers: [
           BlocProvider<InfosCubit>(
@@ -33,6 +34,9 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider<TechnosCubit>(
             create: (BuildContext context) => TechnosCubit(),
+          ),
+          BlocProvider<StudiesCubit>(
+            create: (BuildContext context) => StudiesCubit(),
           ),
           BlocProvider<ExperienceBloc>(
             create: (_) => ExperienceBloc()..add(LoadingExperience()),

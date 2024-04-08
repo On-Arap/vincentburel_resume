@@ -7,3 +7,4 @@ export './technos_container.dart';
 export './extra_container.dart';
 export './tournaments_container.dart';
 export './tournaments_list_container.dart';
+export './studies_container.dart';

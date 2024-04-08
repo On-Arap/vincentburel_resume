@@ -4,8 +4,30 @@ import '../classes/destinations.dart';
 
 class HobbiesPage extends StatefulWidget {
   final Destination destination;
-  final List emojis = ["🥗", "🍻", "🍔", "🏐", "🚲", "🎮", "♟", "🎨", "☕️", "🌳"];
-  final List hobbies = ["veggie food", "party/afterwork", "street food", "volleyball", "fixe-gear bikes", "video games", "chess", "tattoo", "coffee", "ecology"];
+  final List emojis = [
+    "🏐",
+    "🎮",
+    "🚲",
+    "🥗",
+    "🍻",
+    "🍔",
+    "🌳",
+    "♟",
+    "🎨",
+    "☕️",
+  ];
+  final List hobbies = [
+    "volleyball",
+    "video games",
+    "fixe-gear bikes",
+    "veggie food",
+    "party/afterwork",
+    "street food",
+    "ecology",
+    "chess",
+    "tattoo",
+    "coffee",
+  ];
 
   HobbiesPage({super.key, required this.destination});
 
