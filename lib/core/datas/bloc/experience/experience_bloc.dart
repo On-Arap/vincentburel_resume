@@ -23,7 +23,7 @@ List<Experience> experiencesData = [
     org: 'Eion',
     period: '2014-2016',
     jobDesc: 'Mobile Developer, build an iOS app focused on image and art professional',
-    stack: 'Objectif-C',
+    stack: 'Objective-C',
   ),
   Experience(
     image: 'https://media.licdn.com/dms/image/C4D0BAQGi5VLD3zj1KQ/company-logo_200_200/0/1630563622621/op1c_logo?e=1712793600&v=beta&t=54oJ_nOJdr8WaUQCQNm4kO9v_R-8CVUtgyUGMXF9Fh8',
